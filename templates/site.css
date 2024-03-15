@@ -1,3 +1,29 @@
+/* =============== Start Workshop ========= */
+
+td.docs {
+    display: none;
+}
+
+body:has(#toggle-docs:checked) td.docs {
+    display: block;
+}
+
+body div.example h2{
+    margin-top: 0;
+    font-size: 0.5rem;
+	line-height: 0.5rem;
+}
+
+body div.example {
+    width:unset;
+    min-width: unset;
+    max-width: unset;
+}
+body div.example table {
+	margin-top: 0;
+}
+/* =============== End Workshop ========= */
+
 /* CSS reset: https://meyerweb.com/eric/tools/css/reset/ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

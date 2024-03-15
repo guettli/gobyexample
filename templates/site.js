@@ -1,3 +1,26 @@
+/* =============== Start Workshop ========= */
+window.addEventListener('load', function() {
+    // Create checkbox
+    var checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = 'toggle-docs';
+
+    // Create label
+    var label = document.createElement('label');
+    label.htmlFor = 'toggle-docs';
+    label.appendChild(document.createTextNode('Show Text'));
+
+    // Footer
+    var footer = document.querySelector('.footer');
+
+    // Insert checkbox and label before the footer
+    footer.parentNode.insertBefore(checkbox, footer);
+    footer.parentNode.insertBefore(label, checkbox.nextSibling);
+});
+
+/* =============== End Workshop ========= */
+
+
 /*!
  * clipboard.js v1.5.13
  * https://zenorocha.github.io/clipboard.js
