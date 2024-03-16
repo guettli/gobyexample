@@ -13,9 +13,9 @@ import (
 )
 
 // A "sentinel error" has usualy the prefix "Err"
-var ErrOutOfTea = errors.New("no more tea available.")
+var ErrOutOfTea = fmt.Errorf("no more tea available.")
 
-var ErrPower = errors.New("can't boil water.")
+var ErrPower = fmt.Errorf("can't boil water.")
 
 func MakeTea() error {
 	if rand.Int32N(4) == 0 {

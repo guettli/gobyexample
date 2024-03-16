@@ -18,6 +18,36 @@ window.addEventListener('load', function() {
     footer.parentNode.insertBefore(label, checkbox.nextSibling);
 });
 
+let lastPageDownTime = 0;
+let lastPageUpTime = 0;
+
+document.addEventListener('keydown', (event) => {
+    const currentTime = Date.now();
+
+    if (event.key === 'PageDown') {
+        if (currentTime - lastPageDownTime <= 500) {
+            const arrowLeftEvent = new KeyboardEvent('keydown', {
+                key: 'ArrowLeft',
+                bubbles: true,
+            });
+            event.target.dispatchEvent(arrowLeftEvent);
+        }
+
+        lastPageDownTime = currentTime;
+    }
+    if (event.key === 'PageUp') {
+        if (currentTime - lastPageUpTime <= 500) {
+            const arrowRightEvent = new KeyboardEvent('keydown', {
+                key: 'ArrowRight',
+                bubbles: true,
+            });
+
+            event.target.dispatchEvent(arrowRightEvent);
+        }
+        lastPageUpTime = currentTime;
+    }
+});
+
 /* =============== End Workshop ========= */
 
 

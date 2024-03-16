@@ -10,7 +10,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
@@ -18,9 +17,9 @@ import (
 // have type `error`, a built-in interface.
 func f(arg int) (int, error) {
 	if arg == 42 {
-		// `errors.New` constructs a basic `error` value
+		// `fmt.Errorf` constructs a basic `error` value
 		// with the given error message.
-		return -1, errors.New("can't work with 42")
+		return -1, fmt.Errorf("can't work with 42")
 	}
 
 	// A `nil` value in the error position indicates that
