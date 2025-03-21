@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'structs';
@@ -170,7 +173,7 @@ naming related sets of methods: interfaces.</p>
       
       
       <p class="next">
-        Next example: <a href="interfaces">Interfaces</a>.
+        Next example: <a href="interfaces" rel="next">Interfaces</a>.
       </p>
       
 

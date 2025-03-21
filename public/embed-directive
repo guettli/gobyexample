@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'temporary-files-and-directories';
@@ -179,7 +182,7 @@ this example can only be run on your local machine.)</p>
       
       
       <p class="next">
-        Next example: <a href="testing-and-benchmarking">Testing and Benchmarking</a>.
+        Next example: <a href="testing-and-benchmarking" rel="next">Testing and Benchmarking</a>.
       </p>
       
 

@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'variables';
@@ -156,7 +159,7 @@ assignment or function call. For example, here
       
       
       <p class="next">
-        Next example: <a href="for">For</a>.
+        Next example: <a href="for" rel="next">For</a>.
       </p>
       
 

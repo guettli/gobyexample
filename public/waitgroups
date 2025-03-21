@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'worker-pools';
@@ -206,7 +209,7 @@ is likely to be different for each invocation.</p>
       
       
       <p class="next">
-        Next example: <a href="rate-limiting">Rate Limiting</a>.
+        Next example: <a href="rate-limiting" rel="next">Rate Limiting</a>.
       </p>
       
 

@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'epoch';
@@ -177,7 +180,7 @@ explaining the parsing problem.</p>
       
       
       <p class="next">
-        Next example: <a href="random-numbers">Random Numbers</a>.
+        Next example: <a href="random-numbers" rel="next">Random Numbers</a>.
       </p>
       
 

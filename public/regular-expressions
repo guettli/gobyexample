@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'text-templates';
@@ -298,7 +301,7 @@ the <a href="https://pkg.go.dev/regexp"><code>regexp</code></a> package docs.</p
       
       
       <p class="next">
-        Next example: <a href="json">JSON</a>.
+        Next example: <a href="json" rel="next">JSON</a>.
       </p>
       
 

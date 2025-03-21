@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'mutexes';
@@ -279,7 +282,7 @@ program.</p>
       
       
       <p class="next">
-        Next example: <a href="sorting">Sorting</a>.
+        Next example: <a href="sorting" rel="next">Sorting</a>.
       </p>
       
 

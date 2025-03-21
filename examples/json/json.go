@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
 )
 
 // We'll use these two structs to demonstrate encoding and
@@ -121,4 +122,11 @@ func main() {
 	enc := json.NewEncoder(os.Stdout)
 	d := map[string]int{"apple": 5, "lettuce": 7}
 	enc.Encode(d)
+
+	// Streaming reads from `os.Reader`s like `os.Stdin`
+	// or HTTP request bodies is done with `json.Decoder`.
+	dec := json.NewDecoder(strings.NewReader(str))
+	res1 := response2{}
+	dec.Decode(&res1)
+	fmt.Println(res1)
 }

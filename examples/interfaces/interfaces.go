@@ -51,6 +51,15 @@ func measure(g geometry) {
 	fmt.Println(g.perim())
 }
 
+// Sometimes it's useful to know the runtime type of an
+// interface value. One option is using a *type assertion*
+// as shown here; another is a [type `switch`](switch).
+func detectCircle(g geometry) {
+	if c, ok := g.(circle); ok {
+		fmt.Println("circle with radius", c.radius)
+	}
+}
+
 func main() {
 	r := rect{width: 3, height: 4}
 	c := circle{radius: 5}
@@ -61,4 +70,7 @@ func main() {
 	// these structs as arguments to `measure`.
 	measure(r)
 	measure(c)
+
+	detectCircle(r)
+	detectCircle(c)
 }

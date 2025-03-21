@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'writing-files';
@@ -175,7 +178,7 @@ lowercase lines.</p>
       
       
       <p class="next">
-        Next example: <a href="file-paths">File Paths</a>.
+        Next example: <a href="file-paths" rel="next">File Paths</a>.
       </p>
       
 

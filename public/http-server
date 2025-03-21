@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'http-client';
@@ -159,7 +162,7 @@ router we&rsquo;ve just set up.</p>
           </td>
           <td class="code leading">
             
-          <pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go run http-servers.go &amp;</span></span></code></pre>
+          <pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go run http-server.go &amp;</span></span></code></pre>
           </td>
         </tr>
         
@@ -179,7 +182,7 @@ router we&rsquo;ve just set up.</p>
       
       
       <p class="next">
-        Next example: <a href="context">Context</a>.
+        Next example: <a href="context" rel="next">Context</a>.
       </p>
       
 

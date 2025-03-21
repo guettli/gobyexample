@@ -6,10 +6,13 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
-              window.location.href = 'errors';
+              window.location.href = 'custom-errors';
           }
           
           
@@ -181,7 +184,7 @@ concurrent Go programs: channels.</p>
       
       
       <p class="next">
-        Next example: <a href="channels">Channels</a>.
+        Next example: <a href="channels" rel="next">Channels</a>.
       </p>
       
 

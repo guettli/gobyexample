@@ -6,10 +6,13 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
-              window.location.href = 'recursion';
+              window.location.href = 'range-over-built-in-types';
           }
           
           
@@ -166,7 +169,7 @@ the memory address for that variable.</p>
       
       
       <p class="next">
-        Next example: <a href="strings-and-runes">Strings and Runes</a>.
+        Next example: <a href="strings-and-runes" rel="next">Strings and Runes</a>.
       </p>
       
 

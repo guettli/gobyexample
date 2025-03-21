@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'non-blocking-channel-operations';
@@ -190,7 +193,7 @@ example: <code>range</code> over channels.</p>
       
       
       <p class="next">
-        Next example: <a href="range-over-channels">Range over Channels</a>.
+        Next example: <a href="range-over-channels" rel="next">Range over Channels</a>.
       </p>
       
 

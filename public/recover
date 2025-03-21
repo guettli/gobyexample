@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'defer';
@@ -171,7 +174,7 @@ panic and resumes in the deferred closure.</p>
       
       
       <p class="next">
-        Next example: <a href="string-functions">String Functions</a>.
+        Next example: <a href="string-functions" rel="next">String Functions</a>.
       </p>
       
 

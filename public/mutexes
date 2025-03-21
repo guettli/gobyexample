@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'atomic-counters';
@@ -220,7 +223,7 @@ management task using only goroutines and channels.</p>
       
       
       <p class="next">
-        Next example: <a href="stateful-goroutines">Stateful Goroutines</a>.
+        Next example: <a href="stateful-goroutines" rel="next">Stateful Goroutines</a>.
       </p>
       
 

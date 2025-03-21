@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'execing-processes';
@@ -185,7 +188,7 @@ causing the program to print <code>interrupt</code> and then exit.</p>
       
       
       <p class="next">
-        Next example: <a href="exit">Exit</a>.
+        Next example: <a href="exit" rel="next">Exit</a>.
       </p>
       
 

@@ -6,10 +6,13 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
-              window.location.href = 'interfaces';
+              window.location.href = 'enums';
           }
           
           
@@ -215,7 +218,7 @@ we see that a <code>container</code> now implements the
       
       
       <p class="next">
-        Next example: <a href="generics">Generics</a>.
+        Next example: <a href="generics" rel="next">Generics</a>.
       </p>
       
 

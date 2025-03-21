@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'command-line-flags';
@@ -230,7 +233,7 @@ way to parameterize programs.</p>
       
       
       <p class="next">
-        Next example: <a href="environment-variables">Environment Variables</a>.
+        Next example: <a href="environment-variables" rel="next">Environment Variables</a>.
       </p>
       
 

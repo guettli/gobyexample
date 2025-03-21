@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'random-numbers';
@@ -184,7 +187,7 @@ bits.</p>
       
       
       <p class="next">
-        Next example: <a href="url-parsing">URL Parsing</a>.
+        Next example: <a href="url-parsing" rel="next">URL Parsing</a>.
       </p>
       
 

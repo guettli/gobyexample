@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'string-functions';
@@ -394,7 +397,7 @@ and returns a string without printing it anywhere.</p>
       
       
       <p class="next">
-        Next example: <a href="text-templates">Text Templates</a>.
+        Next example: <a href="text-templates" rel="next">Text Templates</a>.
       </p>
       
 

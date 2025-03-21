@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'hello-world';
@@ -129,7 +132,7 @@ basic examples.</p>
       
       
       <p class="next">
-        Next example: <a href="variables">Variables</a>.
+        Next example: <a href="variables" rel="next">Variables</a>.
       </p>
       
 

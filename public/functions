@@ -6,10 +6,13 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
-              window.location.href = 'range';
+              window.location.href = 'maps';
           }
           
           
@@ -166,7 +169,7 @@ multiple return values, which we&rsquo;ll look at next.</p>
       
       
       <p class="next">
-        Next example: <a href="multiple-return-values">Multiple Return Values</a>.
+        Next example: <a href="multiple-return-values" rel="next">Multiple Return Values</a>.
       </p>
       
 

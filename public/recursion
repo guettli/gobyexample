@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'closures';
@@ -14,7 +17,7 @@
           
           
           if (e.key == "ArrowRight") {
-              window.location.href = 'pointers';
+              window.location.href = 'range-over-built-in-types';
           }
           
       }
@@ -43,7 +46,7 @@ Here&rsquo;s a classic example.</p>
             
           </td>
           <td class="code leading">
-            <a href="https://go.dev/play/p/MBTKk9VpAiK"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+            <a href="https://go.dev/play/p/k4IRATLn9cE"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
           <pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre>
           </td>
         </tr>
@@ -88,9 +91,9 @@ base case of <code>fact(0)</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>Closures can also be recursive, but this requires the
-closure to be declared with a typed <code>var</code> explicitly
-before it&rsquo;s defined.</p>
+            <p>Anonymous functions can also be recursive, but this requires
+explicitly declaring a variable with <code>var</code> to store
+the function before it&rsquo;s defined.</p>
 
           </td>
           <td class="code leading">
@@ -156,7 +159,7 @@ knows which function to call with <code>fib</code> here.</p>
       
       
       <p class="next">
-        Next example: <a href="pointers">Pointers</a>.
+        Next example: <a href="range-over-built-in-types" rel="next">Range over Built-in Types</a>.
       </p>
       
 

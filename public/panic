@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'sorting-by-functions';
@@ -163,7 +166,7 @@ to use error-indicating return values wherever possible.</p>
       
       
       <p class="next">
-        Next example: <a href="defer">Defer</a>.
+        Next example: <a href="defer" rel="next">Defer</a>.
       </p>
       
 

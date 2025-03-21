@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'channels';
@@ -130,7 +133,7 @@ concurrent receive.</p>
       
       
       <p class="next">
-        Next example: <a href="channel-synchronization">Channel Synchronization</a>.
+        Next example: <a href="channel-synchronization" rel="next">Channel Synchronization</a>.
       </p>
       
 

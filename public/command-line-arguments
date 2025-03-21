@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'testing-and-benchmarking';
@@ -147,7 +150,7 @@ with flags.</p>
       
       
       <p class="next">
-        Next example: <a href="command-line-flags">Command-Line Flags</a>.
+        Next example: <a href="command-line-flags" rel="next">Command-Line Flags</a>.
       </p>
       
 

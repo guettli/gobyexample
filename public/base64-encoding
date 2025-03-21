@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'sha256-hashes';
@@ -164,7 +167,7 @@ but they both decode to the original string as desired.</p>
       
       
       <p class="next">
-        Next example: <a href="reading-files">Reading Files</a>.
+        Next example: <a href="reading-files" rel="next">Reading Files</a>.
       </p>
       
 

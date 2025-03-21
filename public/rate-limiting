@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'waitgroups';
@@ -228,7 +231,7 @@ then serve the remaining 2 with ~200ms delays each.</p>
       
       
       <p class="next">
-        Next example: <a href="atomic-counters">Atomic Counters</a>.
+        Next example: <a href="atomic-counters" rel="next">Atomic Counters</a>.
       </p>
       
 

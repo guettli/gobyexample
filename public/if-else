@@ -6,7 +6,10 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      onkeydown = (e) => {
+      window.onkeydown = (e) => {
+          if (e.ctrlKey || e.altKey || e.shiftKey) {
+              return;
+          }
           
           if (e.key == "ArrowLeft") {
               window.location.href = 'for';
@@ -176,7 +179,7 @@ for basic conditions.</p>
       
       
       <p class="next">
-        Next example: <a href="switch">Switch</a>.
+        Next example: <a href="switch" rel="next">Switch</a>.
       </p>
       
 
