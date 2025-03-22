@@ -7,6 +7,7 @@ require (
 	github.com/aws/aws-sdk-go-v2 v1.21.2
 	github.com/aws/aws-sdk-go-v2/config v1.19.1
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.40.2
+	github.com/google/go-cmp v0.5.8
 	github.com/russross/blackfriday/v2 v2.1.0
 )
 

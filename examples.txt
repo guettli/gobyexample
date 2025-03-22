@@ -11,8 +11,8 @@ Maps
 Functions
 Multiple Return Values
 Variadic Functions
-Closures
-Recursion
+#Closures
+#Recursion
 Range over Built-in Types
 Pointers
 Strings and Runes

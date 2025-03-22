@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      var prevExampleID = 'recursion';
+      var prevExampleID = 'variadic-functions';
       var nextExampleID = 'pointers';
 
       window.onkeydown = (e) => {
@@ -15,7 +15,7 @@
           }
           
           if (e.key == "ArrowLeft") {
-              window.location.href = 'recursion';
+              window.location.href = 'variadic-functions';
           }
           
           

@@ -7,7 +7,7 @@
   </head>
   <script>
       var prevExampleID = 'multiple-return-values';
-      var nextExampleID = 'closures';
+      var nextExampleID = 'range-over-built-in-types';
 
       window.onkeydown = (e) => {
           if (e.ctrlKey || e.altKey || e.shiftKey) {
@@ -20,7 +20,7 @@
           
           
           if (e.key == "ArrowRight") {
-              window.location.href = 'closures';
+              window.location.href = 'range-over-built-in-types';
           }
           
       }
@@ -167,7 +167,7 @@ to form closures, which we&rsquo;ll look at next.</p>
       
       
       <p class="next">
-        Next example: <a href="closures" rel="next">Closures</a>.
+        Next example: <a href="range-over-built-in-types" rel="next">Range over Built-in Types</a>.
       </p>
       
 

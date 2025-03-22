@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
         }
         deltaLastUp = currentTime - lastUpTime;
         let step = 1;
-        if (deltaLastUp < 200) {
+        if (deltaLastUp < 140) {
             step = 5;
         }
         lastUpTime = currentTime;

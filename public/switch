@@ -170,13 +170,10 @@ type corresponding to its clause.</p>
           </td>
           <td class="code">
             
-          <pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go run switch.go 
+          <pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go run switch.go
 </span></span><span class="line"><span class="cl"><span class="go">Write 2 as two
 </span></span></span><span class="line"><span class="cl"><span class="go">It&#39;s a weekday
-</span></span></span><span class="line"><span class="cl"><span class="go">It&#39;s after noon
-</span></span></span><span class="line"><span class="cl"><span class="go">I&#39;m a bool
-</span></span></span><span class="line"><span class="cl"><span class="go">I&#39;m an int
-</span></span></span><span class="line"><span class="cl"><span class="go">Don&#39;t know type string</span></span></span></code></pre>
+</span></span></span><span class="line"><span class="cl"><span class="go">It&#39;s after noon</span></span></span></code></pre>
           </td>
         </tr>
         

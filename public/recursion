@@ -6,7 +6,7 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
-      var prevExampleID = 'closures';
+      var prevExampleID = 'variadic-functions';
       var nextExampleID = 'range-over-built-in-types';
 
       window.onkeydown = (e) => {
@@ -15,7 +15,7 @@
           }
           
           if (e.key == "ArrowLeft") {
-              window.location.href = 'closures';
+              window.location.href = 'variadic-functions';
           }
           
           
