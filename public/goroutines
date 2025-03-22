@@ -6,6 +6,9 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
+      var prevExampleID = 'custom-errors';
+      var nextExampleID = 'channels';
+
       window.onkeydown = (e) => {
           if (e.ctrlKey || e.altKey || e.shiftKey) {
               return;

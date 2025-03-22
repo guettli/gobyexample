@@ -6,6 +6,9 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
+      var prevExampleID = 'number-parsing';
+      var nextExampleID = 'sha256-hashes';
+
       window.onkeydown = (e) => {
           if (e.ctrlKey || e.altKey || e.shiftKey) {
               return;

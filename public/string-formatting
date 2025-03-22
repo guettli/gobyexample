@@ -6,6 +6,9 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
+      var prevExampleID = 'string-functions';
+      var nextExampleID = 'text-templates';
+
       window.onkeydown = (e) => {
           if (e.ctrlKey || e.altKey || e.shiftKey) {
               return;

@@ -6,6 +6,9 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
+      var prevExampleID = 'base64-encoding';
+      var nextExampleID = 'writing-files';
+
       window.onkeydown = (e) => {
           if (e.ctrlKey || e.altKey || e.shiftKey) {
               return;

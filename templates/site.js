@@ -21,20 +21,61 @@ window.addEventListener('load', function () {
 
     // Add event listener for cursor down (arrow down key)
     document.addEventListener('keydown', function (event) {
-        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') {
+        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp' && event.key !== 'PageDown' && event.key !== 'PageUp') {
             return;
         }
         event.preventDefault();
+
+        // This is broken in Chrome
+        // https://issues.chromium.org/issues/40940886
+        if (event.repeat) {
+            return;
+        }
+
+        // Work around Chrome bug
+        if (upSeen === false) {
+            return;
+        }
+        keyDownTime = new Date().getTime();
+    });
+    document.addEventListener('keyup', function (event) {
+        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp' && event.key !== 'PageDown' && event.key !== 'PageUp') {
+            return;
+        }
+        upSeen = true;
+        let switchPage = false
+        const currentTime = new Date().getTime();
+        let delta = currentTime - keyDownTime
+        if (delta > 400 && delta < 2000) {
+            switchPage = true;
+        }
+        deltaLastUp = currentTime - lastUpTime;
+        let step = 1;
+        if (deltaLastUp < 200) {
+            step = 5;
+        }
+        lastUpTime = currentTime;
+        event.preventDefault();
         const lines = document.querySelectorAll('.line');
-        if (event.key === 'ArrowDown') {
-            // Move to the next line if it exists
-            if (darkerLine < lines.length - 1) {
-                darkerLine++;
+        if (event.key === 'ArrowDown' || event.key === 'PageDown') {
+            if (switchPage === true && window.nextExampleID !== "") {
+                window.location.href = window.nextExampleID;
+                return;
             }
-        } else if (event.key === 'ArrowUp') {
+            // Move to the next line if it exists
+            darkerLine += step;
+            if (darkerLine >= lines.length) {
+                darkerLine = lines.length - 1;
+            }
+        } else if (event.key === 'ArrowUp' || event.key === 'PageUp') {
+            if (switchPage === true && window.prevExampleID !== "") {
+                window.location.href = window.prevExampleID;
+                return;
+            }
             // Move to the previous line if it exists
-            if (darkerLine > 0) {
-                darkerLine--;
+            darkerLine -= step;
+            if (darkerLine < 0) {
+                darkerLine = 0;
             }
         }
         makeLineDarker();
@@ -42,6 +83,9 @@ window.addEventListener('load', function () {
 });
 
 var darkerLine = 0;
+var keyDownTime = 0;
+var lastUpTime = 0;
+var upSeen = true;
 
 function makeLineDarker() {
     const lines = document.querySelectorAll('.line');

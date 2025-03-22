@@ -10,8 +10,14 @@ body:has(#toggle-docs:checked) td.docs {
 
 body div.example h2 {
   margin-top: 0;
-  font-size: 0.5rem;
-  line-height: 0.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+body div.example h2 a {
+  font-size: 1rem;
+  line-height: 1rem;
+  opacity: 0.5;
 }
 
 body div.example {
@@ -25,7 +31,11 @@ body div.example table {
 }
 
 .darker {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255);
+  border-left: 1px solid rgba(155, 26, 172, 0.5);
+  border-right: 1px solid rgba(155, 26, 172, 0.5);
+  border-top: 2px solid rgba(155, 26, 172, 0.5);
+  border-bottom: 2px solid rgba(155, 26, 172, 0.5);
 }
 
 /* =============== End Workshop ========= */
@@ -306,7 +316,7 @@ p.footer a:visited {
 }
 
 td.code {
-  background: #f0f0f0;
+  background: #c2c2c2;
 }
 
 /* Syntax highlighting: light mode */

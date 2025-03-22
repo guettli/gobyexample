@@ -6,6 +6,9 @@
     <link rel=stylesheet href="site.css">
   </head>
   <script>
+      var prevExampleID = '{{if .PrevExample}}{{.PrevExample.ID}}{{end}}';
+      var nextExampleID = '{{if .NextExample}}{{.NextExample.ID}}{{end}}';
+
       window.onkeydown = (e) => {
           if (e.ctrlKey || e.altKey || e.shiftKey) {
               return;
